@@ -19,6 +19,7 @@ import { Bento } from "./scenes/Bento";
 import { OneApp } from "./scenes/OneApp";
 import { Proof } from "./scenes/Proof";
 import { CTA } from "./scenes/CTA";
+import { Thumbnail } from "./scenes/Thumbnail";
 import "./index.css";
 
 const FPS = 30;
@@ -36,6 +37,7 @@ export const RemotionRoot: React.FC = () => {
         width={W}
         height={H}
       />
+      <Composition id="Thumbnail" component={Thumbnail} durationInFrames={1} fps={FPS} width={W} height={H} />
       <Folder name="Scenes">
         <Composition id="Hook" component={Hook} durationInFrames={84} fps={FPS} width={W} height={H} />
         <Composition id="Brand" component={Brand} durationInFrames={78} fps={FPS} width={W} height={H} />

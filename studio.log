@@ -2528,3 +2528,37 @@ Building...
 Built in 55ms
 Building...
 Built in 48ms
+Building...
+Built in 110ms
+Building...
+Built in 75ms
+Building...
+Built in 52ms
+Building...
+Built in 94ms
+Building...
+Built in 51ms
+Building...
+[1m[31mERROR[39m[22m in [1m./src/scenes/Bento.tsx[39m[22m
+  × Module build failed [2m(from builtin:swc-loader)[0m:
+[2m  ├─▶ [0m  ×   x Unterminated regexp literal
+[2m  │   [0m  [2m│[0m      ,-[/Users/harisnazir/Documents/easyscan-appstore-ad/src/scenes/Bento.tsx:654:1]
+[2m  │   [0m  [2m│[0m  651 |                 Easy<span style={{ color: MINT }}>Scan</span>
+[2m  │   [0m  [2m│[0m  652 |               </div>
+[2m  │   [0m  [2m│[0m  653 |             </div>
+[2m  │   [0m  [2m│[0m  654 |           </Tile>
+[2m  │   [0m  [2m│[0m      :            ^^^^^^
+[2m  │   [0m  [2m│[0m  655 |           <Tile order={2} col="3" row="2">
+[2m  │   [0m  [2m│[0m  656 |             <Bell />
+[2m  │   [0m  [2m│[0m  657 |             <Label>Low-stock alerts</Label>
+[2m  │   [0m  [2m│[0m      `----
+[2m  │   [0m  [2m│[0m
+[2m  │   [0m
+[2m  ╰─▶ [0m  × Syntax Error
+Built in 55ms
+Building...
+Built in 63ms
+Building...
+Built in 54ms
+Building...
+Built in 60ms

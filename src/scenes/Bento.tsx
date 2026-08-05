@@ -557,7 +557,9 @@ const Locations: React.FC = () => {
 
 // ——— scene ———
 
-export const Bento: React.FC = () => {
+// `backdrop`: strips the kicker and the center-tile lockup so the grid can sit
+// behind other artwork (thumbnail) without duplicated text.
+export const Bento: React.FC<{ backdrop?: boolean }> = ({ backdrop }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const kicker = spring({ frame, fps, config: { damping: 18 } });
@@ -570,23 +572,25 @@ export const Bento: React.FC = () => {
     <Stage glow={0.75}>
       <BarcodeBackdrop opacity={0.035} />
       <Audio src={staticFile("beep.mp3")} from={52} volume={0.4} />
-      <div
-        style={{
-          position: "absolute",
-          top: 70,
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          fontFamily: FONT_MONO,
-          fontSize: 26,
-          letterSpacing: "0.28em",
-          textTransform: "uppercase",
-          color: COLORS.lime,
-          opacity: kicker,
-        }}
-      >
-        Everything inventory · one app
-      </div>
+      {!backdrop && (
+        <div
+          style={{
+            position: "absolute",
+            top: 70,
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            fontFamily: FONT_MONO,
+            fontSize: 26,
+            letterSpacing: "0.28em",
+            textTransform: "uppercase",
+            color: COLORS.lime,
+            opacity: kicker,
+          }}
+        >
+          Everything inventory · one app
+        </div>
+      )}
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
         <div
           style={{
@@ -617,6 +621,7 @@ export const Bento: React.FC = () => {
             <Label>Stock counts</Label>
           </Tile>
           <Tile order={8} col="2" row="2" center>
+            {!backdrop && (
             <div
               style={{
                 display: "flex",
@@ -646,6 +651,7 @@ export const Bento: React.FC = () => {
                 Easy<span style={{ color: MINT }}>Scan</span>
               </div>
             </div>
+            )}
           </Tile>
           <Tile order={2} col="3" row="2">
             <Bell />
