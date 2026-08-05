@@ -363,7 +363,7 @@ export const AdminFrame: React.FC<{
         borderRadius: 14,
         overflow: "hidden",
         backgroundColor: "#F1F1F1",
-        boxShadow: "0 50px 140px rgba(0,0,0,0.4), 0 8px 30px rgba(0,0,0,0.22)",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.35), 0 8px 24px rgba(0,0,0,0.2)",
         opacity: s,
         display: "flex",
         flexDirection: "column",

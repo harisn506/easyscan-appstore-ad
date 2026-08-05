@@ -121,7 +121,7 @@ export const Panel: React.FC<{
       backgroundColor: "#F6F6F7",
       border: "1px solid #E1E3E5",
       boxShadow:
-        "0 60px 140px rgba(10,30,22,0.35), 0 14px 40px rgba(10,30,22,0.18)",
+        "0 36px 90px rgba(10,30,22,0.32), 0 12px 32px rgba(10,30,22,0.16)",
       overflow: "hidden",
       fontFamily: FONT_BODY,
     }}

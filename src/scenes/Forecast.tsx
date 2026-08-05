@@ -80,7 +80,7 @@ export const Forecast: React.FC = () => {
             borderRadius: 20,
             border: `1px solid ${COLORS.stroke}`,
             backgroundColor: "rgba(13,19,16,0.92)",
-            boxShadow: "0 60px 140px rgba(0,0,0,0.55)",
+            boxShadow: "0 36px 90px rgba(0,0,0,0.5)",
             padding: "26px 38px 30px",
             opacity: card,
             translate: `0px ${(1 - card) * 80}px`,

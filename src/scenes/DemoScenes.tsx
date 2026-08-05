@@ -317,7 +317,7 @@ export const OrderScene: React.FC = () => {
               borderRadius: 18,
               backgroundColor: "#FFFFFF",
               boxShadow:
-                "0 60px 140px rgba(10,30,22,0.4), 0 14px 40px rgba(10,30,22,0.2)",
+                "0 36px 90px rgba(10,30,22,0.35), 0 12px 32px rgba(10,30,22,0.18)",
               overflow: "hidden",
               fontFamily: FONT_BODY,
               position: "relative",
@@ -469,7 +469,7 @@ export const OrderScene: React.FC = () => {
               borderRadius: 20,
               padding: 4,
               background: AI_GRADIENT,
-              boxShadow: "0 40px 110px rgba(10,30,22,0.4)",
+              boxShadow: "0 30px 80px rgba(10,30,22,0.35)",
             }}
           >
             <div
@@ -506,7 +506,9 @@ export const OrderScene: React.FC = () => {
               position: "absolute",
               top: 268,
               width: 1180,
-              opacity: poS,
+              // solidify fast — a half-transparent white panel over the stage
+              // reads as a broken grey slab, not a surface
+              opacity: Math.min(poS * 1.7, 1),
               translate: `0px ${(1 - poS) * 70}px`,
               scale: String(0.97 + poS * 0.03 + interpolate(frame, [B_END, B_END + 68], [0, 0.03], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })),
             }}
@@ -721,7 +723,7 @@ export const LabelScene: React.FC = () => {
         inset: 0,
         borderRadius: 14,
         backgroundColor: "#FFFFFF",
-        boxShadow: "0 40px 110px rgba(0,0,0,0.5)",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
         transform: `rotate(${rot * fan}deg) translateX(${dx * fan}px)`,
         opacity: o,
       }}
@@ -767,7 +769,7 @@ export const LabelScene: React.FC = () => {
               inset: 0,
               borderRadius: 14,
               backgroundColor: "#FFFFFF",
-              boxShadow: "0 50px 130px rgba(0,0,0,0.55)",
+              boxShadow: "0 36px 90px rgba(0,0,0,0.5)",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -1044,7 +1046,7 @@ export const AlertsScene: React.FC = () => {
             borderRadius: 16,
             backgroundColor: "#1A1C1D",
             border: "1px solid rgba(61,220,151,0.35)",
-            boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 60px rgba(0,128,96,0.15)",
+            boxShadow: "0 30px 80px rgba(0,0,0,0.55), 0 0 50px rgba(0,128,96,0.15)",
             padding: "20px 26px",
             fontFamily: FONT_BODY,
             color: "#fff",
