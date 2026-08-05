@@ -13,19 +13,20 @@ export const Thumbnail: React.FC = () => {
           <Bento backdrop />
         </AbsoluteFill>
       </Sequence>
-      {/* dim the grid so the lockup owns the frame */}
+      {/* dim the grid so the lockup owns the frame; center stays clear for
+          the player's play button */}
       <AbsoluteFill
         style={{
           background:
-            "radial-gradient(ellipse 64% 60% at 50% 47%, rgba(4,9,6,0.93), rgba(4,9,6,0.62) 60%, rgba(4,9,6,0.3))",
+            "radial-gradient(ellipse 70% 62% at 50% 26%, rgba(4,9,6,0.94), rgba(4,9,6,0.6) 58%, rgba(4,9,6,0.3))",
         }}
       />
       <AbsoluteFill
         style={{
-          justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          gap: 46,
+          gap: 34,
+          paddingTop: 88,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 44 }}>
@@ -65,11 +66,14 @@ export const Thumbnail: React.FC = () => {
         </div>
         <div
           style={{
+            position: "absolute",
+            bottom: 54,
             fontFamily: FONT_MONO,
             fontSize: 28,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
             color: COLORS.lime,
+            textShadow: "0 4px 20px rgba(0,0,0,0.8)",
           }}
         >
           Everything inventory · one app
